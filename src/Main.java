@@ -22,8 +22,6 @@ public class Main {
         }
 
         System.out.println(firstNumber + " " + theOperation + " " + secondNumber + " = " + answer);
-
-//        System.out.println("The result of this operation is " + answer);
     }
-
+    
 }
