@@ -1,9 +1,36 @@
 import java.util.Scanner;
 
-public class Calculator {
-    private String operation;
-    private double firstNum;
-    private double secondNum;
+class Calculator {
+    public String operation;
+    public double firstNum;
+    public double secondNum;
+
+    public void welcome() {
+        System.out.println("Welcome to Nirayka's Calculator.");
+    }
+
+    public void run() {
+        setOperation();
+        String theOperation = getOperation();
+        setNumOne();
+        double firstNumber = getNumOne();
+        setNumTwo();
+        double secondNumber = getNumTwo();
+
+        double answer = 0.0;
+
+        if (theOperation.equals("+")) {
+            answer = addition(firstNumber, secondNumber);
+        } else if (theOperation.equals("-")) {
+            answer = subtraction(firstNumber, secondNumber);
+        } else if (theOperation.equals("*")) {
+            answer = multiplication(firstNumber, secondNumber);
+        } else if (theOperation.equals("/")) {
+            answer = division(firstNumber, secondNumber);
+        }
+
+        System.out.println("\n" + firstNumber + " " + theOperation + " " + secondNumber + " = " + answer);
+    }
 
     public void setOperation()
     {
